@@ -134,7 +134,9 @@ const Navbar = () => {
       {showSearchBar && <div className="search-background"></div>}
       {showCartModal && <CartModal />}
       <Sidebar showSidebar={showSidebar} closeSidebar={toggleSidebar} />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       <Footer />
     </GoogleOAuthProvider>
   );

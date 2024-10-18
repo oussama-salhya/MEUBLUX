@@ -29,64 +29,62 @@ import {
 } from "./components";
 const App = () => {
   return (
-    <main>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Navbar />}>
-            <Route index element={<Home />} />
-            <Route path="products" element={<Products />} />
-            <Route path="products/:id" element={<SingleProduct />} />
-            <Route
-              path="checkout"
-              element={
-                <ProtectedRoute>
-                  <Checkout />
-                </ProtectedRoute>
-              }
-            />
-            <Route path="cart" element={<Cart />} />
-            <Route path="about" element={<About />} />
-            <Route
-              path="orders"
-              element={
-                <ProtectedRoute>
-                  <UserOrders />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="account"
-              element={
-                <ProtectedRoute>
-                  <Account />
-                </ProtectedRoute>
-              }
-            />
-            <Route path="verify-email" element={<VerifyEmail />} />
-            <Route path="*" element={<Error />} />
-          </Route>
-          <Route path="login" element={<DashboardLogin />} />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Navbar />}>
+          <Route index element={<Home />} />
+          <Route path="products" element={<Products />} />
+          <Route path="products/:id" element={<SingleProduct />} />
           <Route
-            path="/dashboard"
+            path="checkout"
             element={
-              <DashboardProtectedRoute>
-                <SharedDashboardLayout />
-              </DashboardProtectedRoute>
+              <ProtectedRoute>
+                <Checkout />
+              </ProtectedRoute>
             }
-          >
-            <Route index element={<DashboardHome />} />
-            <Route path="products" element={<DashboardProducts />} />
-            <Route path="add-product" element={<AddProductDashboard />} />
-            <Route path="orders" element={<Orders />} />
-            <Route path="customers" element={<Customers />} />
-            <Route path="products/:id" element={<ProductDetails />} />
-            <Route path="categories" element={<Categories />} />
-            <Route path="*" element={<Error />} />
-          </Route>
-        </Routes>
-        <Toast />
-      </BrowserRouter>
-    </main>
+          />
+          <Route path="cart" element={<Cart />} />
+          <Route path="about" element={<About />} />
+          <Route
+            path="orders"
+            element={
+              <ProtectedRoute>
+                <UserOrders />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="account"
+            element={
+              <ProtectedRoute>
+                <Account />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="verify-email" element={<VerifyEmail />} />
+          <Route path="*" element={<Error />} />
+        </Route>
+        <Route path="login" element={<DashboardLogin />} />
+        <Route
+          path="/dashboard"
+          element={
+            <DashboardProtectedRoute>
+              <SharedDashboardLayout />
+            </DashboardProtectedRoute>
+          }
+        >
+          <Route index element={<DashboardHome />} />
+          <Route path="products" element={<DashboardProducts />} />
+          <Route path="add-product" element={<AddProductDashboard />} />
+          <Route path="orders" element={<Orders />} />
+          <Route path="customers" element={<Customers />} />
+          <Route path="products/:id" element={<ProductDetails />} />
+          <Route path="categories" element={<Categories />} />
+          <Route path="*" element={<Error />} />
+        </Route>
+      </Routes>
+      <Toast />
+    </BrowserRouter>
   );
 };
 
