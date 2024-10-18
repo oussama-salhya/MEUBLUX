@@ -57,5 +57,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://meublux.onrender.com/"
+  "proxy": "http://localhost:5000/"
 }
