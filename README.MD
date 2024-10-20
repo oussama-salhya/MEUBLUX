@@ -2,6 +2,8 @@
 
 This is a MERN (MongoDB, Express, React, Node.js) stack application for an e-commerce platform.
 
+🔗 You can check out the live website here: https://tapilux.onrender.com/
+
 ## Features
 
 - **Home Page**: A welcoming home page with featured products and categories.
